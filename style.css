@@ -1,3 +1,4 @@
+/* Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -10,7 +11,6 @@
 body {
     background: #081b29;
     color: #ededed;
-
 }
 
 .header {
@@ -44,7 +44,6 @@ body {
     background: #081b29;
     animation: showRight 1s ease forwards;
     animation-delay: .4s;
-
 }
 
 .navbar a {
@@ -54,7 +53,6 @@ body {
     font-weight: 500;
     margin-left: 35px;
 }
-
 
 .navbar a:hover {
     color: #00abf0;
@@ -292,140 +290,135 @@ body {
     z-index: 100;
 }
 
-@keyframes showRight {
-    100%{
-        width: 0;
-    }
-}
+/* Mobile and Tablet Responsive Styles with Animations */
 
+/* For smaller devices (max-width: 1024px) */
 @media (max-width: 1024px) {
-    .home {
-        flex-direction: column;
-        text-align: center;
+    .home-content h1 {
+        font-size: 40px;
     }
 
-    .home-content {
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .astronaut {
-        width: 80%;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar a {
-        margin-bottom: 10px;
-    }
-
-    .btn-box a {
-        padding: 12px 25px;
-    }
-}
-
-@media (max-width: 768px) {
-    .home h1 {
+    .home-content h3 {
         font-size: 28px;
     }
 
-    .home h3 {
-        font-size: 20px;
-    }
-
-    .home p {
+    .home-content p {
         font-size: 14px;
     }
 
-    .navbar a {
-        font-size: 16px;
-    }
-
-    .home-sci a {
-        font-size: 20px;
+    .home-content .btn-box {
+        width: 90%;
     }
 
     .astronaut {
-        width: 70%;
-    }
-}
-
-@media (max-width: 425px) {
-    .home h1 {
-        font-size: 24px;
-    }
-
-    .home h3 {
-        font-size: 18px;
-    }
-
-    .home p {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-
-    .navbar a {
-        font-size: 14px;
-        padding: 10px;
+        height: 300px;
     }
 
     .home-sci {
-        display: flex;
-        justify-content: center;
-    }
-
-    .home-sci a {
-        margin-right: 15px;
-    }
-
-    .astronaut {
-        width: 90%;
-        margin-top: 20px;
-    }
-
-    .header {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-    }
-
-    .logo {
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn-box a {
-        padding: 8px 15px;
+        width: 150px;
+        justify-content: space-between;
     }
 }
 
-@media (max-width: 320px) {
-    .home h1 {
-        font-size: 22px;
+/* For devices with a max-width of 768px */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 35px;
     }
 
-    .home h3 {
-        font-size: 16px;
+    .home-content h3 {
+        font-size: 26px;
     }
 
-    .home p {
-        font-size: 12px;
+    .home-content p {
+        font-size: 14px;
     }
 
-    .navbar a {
-        font-size: 12px;
-        padding: 8px;
+    .home-content .btn-box {
+        width: 100%;
     }
 
     .astronaut {
-        width: 80%;
+        height: 250px;
+    }
+
+    .home-sci {
+        width: 130px;
+        justify-content: space-around;
+    }
+
+    .home-sci a {
+        font-size: 18px;
+    }
+}
+
+/* For devices with a max-width of 425px */
+@media (max-width: 425px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .home-content h3 {
+        font-size: 22px;
+    }
+
+    .home-content p {
+        font-size: 13px;
+    }
+
+    .astronaut {
+        height: 200px;
+    }
+
+    .home-content .btn-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-sci {
+        width: 120px;
+    }
+
+    .home-sci a {
+        font-size: 16px;
+    }
+
+    .btn-box a {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+/* For very small devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .home-content h1 {
+        font-size: 24px;
+    }
+
+    .home-content h3 {
+        font-size: 18px;
+    }
+
+    .home-content p {
+        font-size: 12px;
+    }
+
+    .astronaut {
+        height: 180px;
+    }
+
+    .home-sci a {
+        font-size: 16px;
+    }
+
+    .btn-box a {
+        font-size: 14px;
+    }
+}
+
+/* Animation to trigger the text animations and content transitions smoothly */
+@keyframes showRight {
+    100% {
+        width: 0;
     }
 }
